@@ -1,0 +1,19 @@
+%h3= link_to 'Back', root_path
+%ul
+  - @locations.each do |location|
+    - attrs = location[:attributes]
+    %li
+      %strong Name:
+      = attrs[:name]
+      %br
+      %strong Phone:
+      = attrs[:phone]
+      %br
+      %strong Public:
+      = attrs[:isPublic]
+      %br
+      %strong Video:
+      = attrs[:isVideo]
+      %br
+      %strong Geo Location:
+      = attrs[:geolocation].values.join(', ')
