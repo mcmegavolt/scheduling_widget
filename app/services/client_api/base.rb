@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ClientApi
-  # Base class for ClientApi services
+  # Base class for ClientApi service objects
   class Base
     API_VERSION = '2019-01-17'
     ACCEPT = 'application/vnd.api+json'
@@ -19,6 +19,8 @@ module ClientApi
     def self.call(*args, &block)
       new(*args, &block).call
     end
+
+    private
 
     def connection(request_params)
       @connection ||= Faraday.new(
