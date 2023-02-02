@@ -62,8 +62,6 @@ http_interactions:
       - gzip
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[{"id":"3866","type":"cptCodes","links":{"self":"https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes/3866"},"attributes":{"description":"Psychiatric
-        Diagnostic Evaluation","duration":50,"rate":"100.0","callToBook":"false","requireCreditCardForNewClients":"unset"}},{"id":"31822614","type":"cptCodes","links":{"self":"https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes/31822614"},"attributes":{"description":"Intro
-        Call","duration":15,"rate":"0.0","callToBook":"false","requireCreditCardForNewClients":"unset"}}],"links":{"first":"https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes?page%5Bnumber%5D=1&page%5Bsize%5D=10","last":"https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes?page%5Bnumber%5D=1&page%5Bsize%5D=10"}}'
+      string: '{"data":[{"id":"<%= service_id %>","type":"cptCodes","links":{"self":"https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes/3866"},"attributes":{"description":"<%= service_description %>","duration":50,"rate":"100.0","callToBook":"false","requireCreditCardForNewClients":"unset"}}],"links":{"first":"https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes?page%5Bnumber%5D=1&page%5Bsize%5D=10","last":"https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes?page%5Bnumber%5D=1&page%5Bsize%5D=10"}}'
   recorded_at: Tue, 31 Jan 2023 15:15:30 GMT
 recorded_with: VCR 6.1.0

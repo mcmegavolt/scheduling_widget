@@ -1,0 +1,18 @@
+.row
+  .col-lg-8
+    .card.mb-3.text-bg-light
+      .card-body
+        .row
+          .col-2
+            = image_tag "service-placeholder", class: "img-fluid"
+          .col-7
+            %h5.card-title= service[:attributes][:description]
+            %p.card-text
+              %svg.bi.me-1{:fill => "currentColor", :height => "20", :viewbox => "0 0 20 20", :width => "20", :xmlns => "http://www.w3.org/2000/svg"}
+                %path{:d => "M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"}
+                %path{:d => "M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"}
+
+              = service[:attributes][:duration]
+              = t('services.minutes')
+          .col-3.align-items-center.d-flex.justify-content-center
+            = link_to t('services.select'), service_locations_path(service[:id]), class: 'btn btn-primary btn-lg'

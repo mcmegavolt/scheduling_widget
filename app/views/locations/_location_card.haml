@@ -1,0 +1,12 @@
+.col-lg-3.col-md-4.col-sm-6
+  .card.mb-3
+    = image_tag "google-map-placeholder"
+    .card-body
+      %h5.card-title= attrs[:name]
+      %p.card-text= attrs[:phone]
+      %p.card-text
+        %small.text-muted
+          = t('locations.geolocation')
+          = attrs[:geolocation].values.join(', ')
+      .d-grid.gap-2.mx-auto
+        = link_to t('locations.select'), "#", class: 'btn btn-primary btn-lg disabled'

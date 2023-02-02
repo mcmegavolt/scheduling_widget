@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe HomeController, type: :controller do
+RSpec.describe ServicesController, type: :controller do
   describe 'GET /index' do
     before do
       allow(ClientApi::FetchClinicianServices).to receive(:call).and_return([])

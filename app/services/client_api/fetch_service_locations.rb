@@ -11,14 +11,13 @@ module ClientApi
       super()
 
       @service_id = service_id
+      @locations = []
     end
 
     def call
       fetch_data
 
-      return false if failed?
-
-      locations
+      [locations, errors]
     end
 
     private
@@ -27,6 +26,8 @@ module ClientApi
       response = connection(request_params).get(REQUEST_PATH)
 
       @locations = response.body.with_indifferent_access[:data]
+    rescue Faraday::Error => e
+      add_error(e.message)
     end
 
     def request_params

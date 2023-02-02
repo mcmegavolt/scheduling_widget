@@ -3,7 +3,9 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  root 'home#index'
+  root 'services#index'
 
-  resources :locations, only: :show
+  resources :services, only: :index do
+    resources :locations, only: :index
+  end
 end

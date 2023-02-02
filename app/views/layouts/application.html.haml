@@ -2,11 +2,20 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %title SchedulingWidget
+    %title= t('brand')
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
-    = javascript_importmap_tags
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
   %body
-    = yield
+    .container-fluid.min-vh-100.d-flex.flex-column
+      .row
+        .col
+          = render 'shared/navbar'
+      .row.flex-grow-1
+        .col-lg-2.col-md-4.col-sm-5
+          .min-vh-100.d-flex.flex-column.p-3.bg-light
+            = render 'shared/sidebar'
+        .col-lg-10.col-md-8.col-sm-7.pt-3
+          = yield

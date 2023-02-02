@@ -1,0 +1,7 @@
+- if @errors.any?
+  = alert_message @errors.join(', '), color: 'danger'
+- elsif @services.any?
+  - @services.each do |service|
+    = render partial: 'service_card', locals: { service: service }
+- else
+  = alert_message t('services.no_available'), color: 'secondary'

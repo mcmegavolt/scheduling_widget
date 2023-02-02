@@ -44,9 +44,5 @@ module ClientApi
     def add_error(message)
       errors << message
     end
-
-    def failed?
-      errors.any?
-    end
   end
 end

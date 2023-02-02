@@ -1,0 +1,9 @@
+%nav.navbar.navbar-expand-md
+  .container-fluid
+    %a.navbar-brand{:href => "#"}= t('brand')
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        %li.nav-item
+          = link_to t('navbar.home_link'), root_path, class: "nav-link #{current_class('services')}"

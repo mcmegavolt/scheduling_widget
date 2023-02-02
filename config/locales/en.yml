@@ -30,4 +30,17 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  brand: Scheduling Widget
+  navbar:
+    home_link: Home
+  sidebar:
+    select_service: Select a Service
+    select_location: Select a Location
+  services:
+    select: Select
+    minutes: minutes
+    no_available: No services are available...
+  locations:
+    select: Select
+    no_available: No locations are available...
+    geolocation: "Geolocation:"

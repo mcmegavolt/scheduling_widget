@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class LocationsController < ActionController::Base
-  def show
-    @locations = ClientApi::FetchServiceLocations.call(params[:id])
+class LocationsController < ApplicationController
+  def index
+    @locations, @errors = ClientApi::FetchServiceLocations.call(params[:service_id])
   end
 end

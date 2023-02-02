@@ -1,6 +1,0 @@
-%ul
-  - @services.each do |service|
-    %li
-      = link_to service[:id], location_path(service[:id])
-      %br
-      = service[:attributes][:description]

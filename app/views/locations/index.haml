@@ -1,0 +1,9 @@
+- if @errors.any?
+  .alert.alert-danger
+    = @errors.join(', ')
+- elsif @locations.any?
+  .row
+    - @locations.each do |location|
+      = render partial: 'location_card', locals: { attrs: location[:attributes] }
+- else
+  = alert_message t('locations.no_available'), color: 'secondary'
