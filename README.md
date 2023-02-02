@@ -1,10 +1,11 @@
 # Scheduling Widget Prototype
----
+
+![Alt text](/app/assets/images/service-placeholder.png?raw=true "Optional Title")
+
 The prototype of the first two steps of a Scheduling Widget:
 
 1. Choose one of the available services for a given medician
 2. Choose a location for a given service
-
 
 > This application is actually a home assignment for completing one of the stages of the hiring process for a Ruby on Rails developer position.
 
