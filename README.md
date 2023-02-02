@@ -1,24 +1,44 @@
-# README
+# Scheduling Widget Prototype
+---
+The prototype of the first two steps of a Scheduling Widget:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Choose one of the available services for a given medician
+2. Choose a location for a given service
 
-Things you may want to cover:
 
-* Ruby version
+> This application is actually a home assignment for completing one of the stages of the hiring process for a Ruby on Rails developer position.
 
-* System dependencies
+## Prerequisites
 
-* Configuration
+This application is developed based on the Rails 7 and Ruby 3.2.
 
-* Database creation
+## Installation
 
-* Database initialization
+Duplicate the `client_api.yml.example` file with the `client_api.yml` name. Fill it with the proper settings.
 
-* How to run the test suite
+Install all dependencies with:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle install
+yarn install
+```
 
-* Deployment instructions
+Run the server:
 
-* ...
+```
+rails server
+```
+
+Finally, go to <http://127.0.0.1:3000>
+
+## Tests
+
+Run specs with:
+
+```
+rspec
+```
+
+## Contributing
+
+Any comments, suggestions for improvement are welcome.
