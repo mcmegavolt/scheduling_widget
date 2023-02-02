@@ -11,7 +11,7 @@ The prototype of the first two steps of a Scheduling Widget:
 
 ## Prerequisites
 
-This application is developed based on the Rails 7 and Ruby 3.2.
+This application is developed with Rails 7 and Ruby 3.2.
 
 ## Installation
 
